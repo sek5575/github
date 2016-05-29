@@ -14,6 +14,7 @@
 
 	if(strcmp($id, $row[0]) == 0){
 		echo "<script>alert('동일한 아이디가 존재합니다.');</script>";
+		echo "<script>history.go(-1);</script>";
 	}
 	else{
 		if((isset($id) && isset($password))){

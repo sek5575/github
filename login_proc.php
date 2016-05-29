@@ -8,10 +8,12 @@
 	if(empty($userid))
    {
       echo "<script>alert('아이디가 입력되지 않았습니다.');</script>";
+      echo "<script>history.go(-1);</script>";
    }
    else if(empty($userpw))
    {
       echo "<script>alert('비밀번호가 입력되지 않았습니다.');</script>";
+      echo "<script>history.go(-1);</script>";
    }
    else {
       $sql = "select * from user where id='$userid' and password='$userpw'";
