@@ -6,8 +6,8 @@
 	$password=$_GET['pwd'];
 
 	$sql = "insert into user (id, password) values ('$id', '$password')";
-	if(isset($id) && isset($password){
-		mysql_query($sql)
+	if((isset($id) && isset($password))){
+		mysql_query($sql);
 		echo "<script>alert('입력되었습니다.');</script>";
 	}
 	else{
