@@ -1,9 +1,13 @@
-<?php
+﻿<?php
 	$connect = @mysql_connect('localhost', 'root', 'song');
 	$db_con = mysql_select_db("today", $connect);
 
 	$userid = $_GET['username'];
 	$userpw = $_GET['password'];
+
+	$date = date("Y-m-d");
+	$Y = date("Y");
+	$M = date("m");
 
 	if(empty($userid))
    {
@@ -28,8 +32,7 @@
       else{
          session_start();
          $_SESSION['userid'] = $userid;
-         $_SESSION['userpw'] = $userpw;
-            echo "<script> alert('로그인 성공!'); window.location.replace('main.php');</script>";
+            echo "<script> alert('로그인 성공!'); window.location.replace('Calendar.php?value=$date&Y=$Y&M=$M');</script>";
       }
   }
 

@@ -2,8 +2,8 @@
 	$connect = @mysql_connect('localhost', 'root', 'song');
 	$db_con = mysql_select_db("today", $connect);
 
-	$id=$_GET['id'];
-	$password=$_GET['pwd'];
+	$id=$_GET['newid'];
+	$password=$_GET['newpwd'];
 
 	$sql = "insert into user (id, password) values ('$id', '$password')";
 
