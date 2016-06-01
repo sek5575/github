@@ -9,7 +9,7 @@
 	<tr>
 		<td style = "width: 800px; height: 100px">
 		<div style = "text-align: center">
-		<img src = "loginimg/love.jpg" height="80" width="150" alt="love">
+		<img src = "loginimg/sns.jpg" height="120" width="200" alt="love">
 		</div>
 		</td>
 
@@ -43,13 +43,27 @@
 		</form>
 		</td>
 	</tr>
-	
 	<tr>
 		<td>
+			<img src="loginimg/image1.png" id=image alt="YsjImage" style="width:650px; height:550px;">
+			<script>
+			var myImage=document.getElementById("image");
+			var imageArray=["loginimg/image1.png","loginimg/image2.jpg","loginimg/image3.jpg","loginimg/image4.jpg"];  //이미지배열을 만들어 넣어준다.
+			var imageIndex=0;
+
+			function changeImage(){
+				myImage.setAttribute("src",imageArray[imageIndex]); //myImage의 src속성 값을 바꿔준다.
+				imageIndex++;
+				if(imageIndex>=imageArray.length){ //이미지index값이 길이보다 커지면 index값을 0으로 바꿔준다
+					imageIndex=0;
+				}
+			}
+			setInterval(changeImage,2000); //일정한 시간간격으로 돌린다.
+			</script>
 		</td>
 
 		<td>
-		<form name="join" method="GET" action="membersave.php">
+		<form name="join" method="GET" action="membersave.php"> 
 		<table style = "margin: 0 auto">
 			<tr>
 				<td>
