@@ -3,7 +3,29 @@
 <head>
 	<style type = "text/css">
 		#edge {border-top-left-radius:8px; border-top-right-radius:8px; border-bottom-left-radius:8px; border-bottom-right-radius: 8px;}
+		#image {border-top-left-radius:15px; border-top-right-radius:15px; border-bottom-left-radius:15px; border-bottom-right-radius: 15px;}
 		#main {margin : 0 auto; weight : 100%; background-color : #5ac7db; height : 40px; margin-bottom : 30px; padding : 20px 0px;}
+		#button1{
+			background: #2e8ce3;
+			font-size:12px;
+			color:#000000;
+			text-align:center;
+			border:solid 1px #73c8f0;
+			background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffff), to(#9FEFF5));
+			border-radius:5px;
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			border-bottom-color:#196ebb;
+			}
+		#button2{
+			font-size:12px;
+			color:#000000;
+			text-align:center;
+			border:solid 1px #B79191;
+			border-radius:5px;
+			-moz-border-radius:5px;
+			-webkit-border-radius:5px;
+			}
 	</style>
 </head>
 <body style = "background-color : #f0f0f0;">
@@ -20,7 +42,7 @@
 		<table cellspacing="10" style = "margin: 0 auto">
 			<tr>
 				<td>
-					<P style = "font-size:20;">아이디</P>
+					<P style = "font-size:18;">아이디</P>
 				</td>
 				<td>
 					<input type = 'text' id='edge' name='username' pattern = ".{4,15}" title = "4~15자로 입력해주세요." style = "width: 180px; height: 40px" />
@@ -28,7 +50,7 @@
 			</tr>
 			<tr>
 				<td>
-					<p style = "font-size:20;">비밀번호</p>
+					<p style = "font-size:18;">비밀번호</p>
 				</td>
 				<td>
 					<input type = 'password'  id='edge' name='password' pattern = ".{4,15}" title = "4~15자로 입력해주세요." style = "width: 180px; height: 40px" />
@@ -38,7 +60,7 @@
 				<td>
 				</td>
 				<td>
-				<input type ='submit' value = '로그인하기' style = "width: 80px; height: 30px" />
+				<input type ='submit' value = '로그인' id = 'button1' style = "width: 80px; height: 30px; background-color:#BEDFE1;" />
 				</td>
 			</tr>
 		</table>
@@ -47,6 +69,7 @@
 	</tr>
 	<tr>
 		<td>
+			<h2>여러분이 하고 싶은일을 적어보세요</h2>
 			<img src="loginimg/im1.jpg" id=image alt="YsjImage" style="width:650px; height:550px;">
 			<script>
 			var myImage=document.getElementById("image");
@@ -68,6 +91,8 @@
 		<form name="join" method="GET" action="membersave.php"> 
 		<table cellspacing="20" style = "margin: 0 auto">
 			<tr>
+				<h2 style="text-align:center;">가입하기</h2>
+				<h3 style="text-align:center;">모두가 친구가 될 수 있습니다!</h3>
 				<td>
 					<input type="text" id='edge' name="newid" placeholder = "아이디" style = "width: 150px; height: 40px; font-size:18;"  pattern = ".{4,15}" title = "4~15자로 입력해주세요." >
 				</td>
@@ -89,7 +114,8 @@
 			</tr>
 
 			<tr>
-				<td colspan=2>
+				<td colspan="2">
+					<font class = "sch"> 생일: </font>
 					<script language = "javascript">
 					var sel1, sel2, sel3;
 					var today = new Date();
@@ -112,16 +138,15 @@
 					sel3.add(new Option(1+i+"일", 1+i), i);
 					}
 					</script>
-
-					<select name="year" id="years" style = "width: 80px; height: 40px"> </select>
-					<select name="month" id="months" style = "width: 80px; height: 40px"> </select>
-					<select name="day" id="days" style = "width: 80px; height: 40px"> </select>
+					<select name="year" id="button2" style = "width: 80px; height: 40px; font-size:14;"> </select>
+					<select name="month" id="button2" style = "width: 80px; height: 40px; font-size:14;"> </select>
+					<select name="day" id="button2" style = "width: 80px; height: 40px; font-size:14;"> </select>
 				</td>
 			</tr>
 
 			<tr>
 				<td colspan=2>
-					<input type=submit value="가입하기" style = "width: 100px; height: 40px">
+					<input type=submit value="가입하기" id = 'button1' style = "width: 90px; height: 35px; background-color:#BEDFE1;">
 				</td>
 			</tr>
 		</table>
@@ -131,9 +156,9 @@
 
 	<tr>
 		<td>
-			<h2>여러분이 하고 싶은일을 적어보세요</h2>
 			<h3>지금 하고 있는 일들을 친구들과 공유해요</h3>
 			<p>KSL © 2016</p>
+			<p style="word-spacing:40px;"><strong>사용정보 지원 블로그 관련기사 개인정보보호 약관 언어</strong></p>
 		</td>
 		<td>
 

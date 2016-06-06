@@ -40,4 +40,14 @@
 			mysql_query($sql);
 			echo "<script>alert('입력되었습니다.');window.location.replace('login.php');</script>";
 	}
+
+	$address = $_GET['mail'];
+
+	$to="someone@example.com";
+	$subject="오늘뭐해?";
+	$message="오늘뭐해? 가입을 축하드립니다.";
+	$from="$address";
+	$header= "From: $from";
+	mail($to, $subject, $message, $header);
+	
 ?>
